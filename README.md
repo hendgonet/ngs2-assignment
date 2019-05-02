@@ -74,3 +74,4 @@ grep "^22" chr22.vcf | sed 's/^22/chr22/g' >> chr_22.vcf
 gatk IndexFeatureFile -F chr_22.vcf
 
 gatk --java-options "-Xmx2G" BaseRecalibrator -R /home/ngs-01/workdir/sample_data/chr22_with_ERCC92.fa -I split.bam --known-sites chr_22.vcf -O Recali_base.report
+
